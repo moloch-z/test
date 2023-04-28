@@ -7,7 +7,7 @@
 ### Quick Start
 
 ```sh
-pnpm install -S @umi-meta/ui --registry=https://npm.umi-meta.com/
+pnpm install -S @umi-meta/ui --registry=http://127.0.0.1/
 ```
 
 ## 详细文档
