@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+packages/umi-meta-ui/version.ts
+*.local
+yarn.lock
+yarn-error.log
+package-lock.json

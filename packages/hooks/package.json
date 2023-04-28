@@ -1,0 +1,15 @@
+{
+  "name": "@umi-meta/hooks",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "author": "landj@bwoil.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.2.x"
+  },
+  "dependencies": {
+    "@umi-meta/locale": "workspace:^",
+    "@umi-meta/utils": "workspace:^"
+  }
+}

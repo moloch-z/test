@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "ES2018",
+    "module": "ES6",
+    "strict": true,
+    "allowJs": true,
+    "lib": ["ES2018", "DOM"],
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["unplugin-vue-macros/macros-global"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@umi-meta/*": ["packages/*"]
+    }
+  },
+  "include": ["packages", "typings"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@umi-meta/internal",
+  "description": "打包等工具",
+  "main": "index.ts",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "author": "landj@bwoil.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@umi-meta/utils": "workspace:^"
+  }
+}

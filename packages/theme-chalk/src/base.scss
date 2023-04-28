@@ -1,0 +1,7 @@
+@use 'var.scss';
+@use 'common/transition.scss';
+
+[tabindex] {
+  border: 0;
+  outline: none !important;
+}

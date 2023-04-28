@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npx --no-install commitlint --edit $1
+# 交互式commit
+pnpm commitlint --edit $1

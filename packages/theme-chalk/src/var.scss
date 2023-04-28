@@ -1,0 +1,78 @@
+@use 'sass:map';
+
+// CSS3 var
+@use 'common/var' as *;
+@use 'mixins/var' as *;
+
+// for better performance do not dynamically change the root variable if you really
+// do not need that, since this could introduce recalculation overhead for rendering.
+// https://lisilinhart.info/posts/css-variables-performance/
+
+:root {
+  --u-color-white: #{$color-white};
+  --u-color-black: #{$color-black};
+  --u-color-primary: #{$color-primary};
+
+  @for $i from 1 through 9 {
+    @include set-css-color-type-light('primary', $i);
+  }
+
+  // --u-color-#{$type}
+  // --u-color-#{$type}-light-{$i}
+  @each $type in (success, warning, danger, error, info) {
+    @include set-css-color-type($type);
+  }
+
+  // Background
+  --u-bg-color: #{$bg-color};
+
+  // Border
+  --u-border-width-base: #{$border-width-base};
+  --u-border-style-base: #{$border-style-base};
+  --u-border-color-hover: #{$border-color-hover};
+  --u-border-base: var(--u-border-width-base) var(--u-border-style-base) var(--u-border-color-base);
+
+  // Svg
+  --u-svg-monochrome-grey: #dcdde0;
+
+  // Fill
+  --u-fill-base: var(--u-color-white);
+
+  // Typography
+  @include set-component-css-var('font-size', $font-size);
+
+  --u-font-weight-primary: 500;
+  --u-font-line-height-primary: 24px;
+  --u-text-color-disabled-base: #bbb;
+
+  // z-index
+  --u-index-normal: 1;
+  --u-index-top: 1000;
+  --u-index-popper: 2000;
+
+  // --u-text-color-#{$type}
+  @include set-component-css-var('text-color', $text-color);
+
+  // --u-border-color-#{$type}
+  @include set-component-css-var('border-color', $border-color);
+
+  // --u-border-radius-#{$type}
+  @include set-component-css-var('border-radius', $border-radius);
+
+  // Box-shadow
+  // --u-box-shadow-#{$type}
+  @include set-component-css-var('box-shadow', $box-shadow);
+
+  // Disable base
+  @include set-component-css-var('disabled', $disabled);
+
+  /* Transition
+-------------------------- */
+  // refer to this website to get the bezier motion function detail
+  //  https://cubic-bezier.com/#p1,p2,p3,p4 (change px as your function parameter)
+  --u-transition-duration: #{map.get($transition-duration, 'default')};
+  --u-transition-duration-fast: #{map.get($transition-duration, 'fast')};
+
+  @include set-component-css-var('transition-function', $transition-function);
+  @include set-component-css-var('transition', $transition);
+}

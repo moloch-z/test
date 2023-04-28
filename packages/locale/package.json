@@ -1,0 +1,8 @@
+{
+  "name": "@umi-meta/locale",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "author": "landj@bwoil.com",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@umi-meta/components",
+  "private": true,
+  "type": "module",
+  "description": "all components are settled here",
+  "version": "0.0.0",
+  "author": "landj@bwoil.com",
+  "license": "MIT",
+  "dependencies": {
+    "@umi-meta/constants": "workspace:^",
+    "@umi-meta/directives": "workspace:^",
+    "@umi-meta/hooks": "workspace:^",
+    "@umi-meta/locale": "workspace:^",
+    "@umi-meta/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@umi-meta/internal": "workspace:^"
+  }
+}
